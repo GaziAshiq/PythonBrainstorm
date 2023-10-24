@@ -21,6 +21,17 @@ class Vehicle:
 class Car(Vehicle):
     """CLass: Car, Inherit: Vehicle class"""
 
+    def __init__(self, name, manufacturer, color, year):
+        self.name = name
+        self.manufacturer = manufacturer
+        self.color = color
+        self.year = year
+        self.wheels = 4
+
+        print(f'A new car has been created, Name: {self.name}')
+        print(f'It has {self.wheels} wheels')
+        print(f'This car built in {self.year}')
+
     def change_gear(self, gear_name):
         print(f'{self.name} changing gear to {gear_name}')
 
@@ -41,7 +52,9 @@ if __name__ == '__main__':
     # v2.brake()
     # v3.brake()
 
-    c1 = Car('Mustang', 'Ford', 'Black')
-    c1.drive()
-    c1.brake()
-    c1.change_gear('P')
+    # c1 = Car('Mustang', 'Ford', 'Black')
+    # c1.drive()
+    # c1.brake()
+    # c1.change_gear('P')
+    #
+    c2 = Car('Mustang', 'Ford', 'Red', 2017)
