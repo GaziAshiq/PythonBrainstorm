@@ -3,3 +3,6 @@
 venv
 Python-3.11.5
 .vscode
+../Meta Back-End Course/w4-Modules/__pycache__/
+../Python_DS_Algorithm/__pycache__/
+__pycache__/
