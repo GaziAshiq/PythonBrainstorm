@@ -1,37 +1,52 @@
 def fibo(n):
-	if n <= 2:
-		return 1
+    """
+    Calculate the nth Fibonacci number.
 
-	fibo_x, fibo_next = 1, 1
+    Args:
+        n (int): The position in the Fibonacci sequence.
 
-	i = 3
-	while i <= n:
-		i += 1
-		fibo_x, fibo_next = fibo_next, fibo_x + fibo_next
-	return fibo_next
+    Returns:
+        int: The nth Fibonacci number.
+    """
+    if n <= 2:
+        return 1
+
+    fibo_x, fibo_next = 1, 1
+
+    for _ in range(3, n + 1):
+        fibo_x, fibo_next = fibo_next, fibo_x + fibo_next
+    return fibo_next
 
 
 def fibo_list(n):
-	li_fib = []
+    """
+    Generate a list of the first n Fibonacci numbers.
 
-	if n == 1:
-		li_fib.append(1)
-	elif n==2:
-		li_fib.append(1)
-		li_fib.append(1)
-	else:
-		fibo_x, fibo_next = 1,1
-		li_fib.append(fibo_x)
-		li_fib.append(fibo_next)
+    Args:
+        n (int): The number of Fibonacci numbers to generate.
 
-		for i in range(2, n):
-			fibo_x, fibo_next = fibo_next, fibo_x + fibo_next
-			li_fib.append(fibo_next)
+    Returns:
+        list: A list containing the first n Fibonacci numbers.
+    """
+    if n == 1:
+        return [1]
+    elif n == 2:
+        return [1, 1]
 
-	return li_fib
+    fibo_x, fibo_next = 1, 1
+    li_fib = [fibo_x, fibo_next]
+
+    for _ in range(2, n):
+        fibo_x, fibo_next = fibo_next, fibo_x + fibo_next
+        li_fib.append(fibo_next)
+
+    return li_fib
 
 
 if __name__ == "__main__":
-	for i in range(1, 11):
-		print(fibo(i))
-	print(fibo_list(10))
+    """
+    Main block to print the first 10 Fibonacci numbers and the list of the first 10 Fibonacci numbers.
+    """
+    for i in range(1, 11):
+        print(fibo(i))
+    print(fibo_list(10))
