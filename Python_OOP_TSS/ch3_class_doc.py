@@ -7,21 +7,17 @@ class Car:
         color (str): The color of the car.
     """
 
-    def __init__(self, name, color):
-        """
-        Constructs all the necessary attributes for the car object.
+    # Class attributes
+    a = ''  # most of the time, class attributes aren't needed
 
-        Args:
-            name (str): The name of the car.
-            color (str): The color of the car.
-        """
+    # Constructor (special method used to initialize the object)
+    def __init__(self, name, color):
+        # Instance attributes (unique to each instance)
         self.name = name
         self.color = color
 
+    # Instance method
     def start(self):
-        """
-        Prints a message indicating that the car has started.
-        """
         print('starting')
 
 

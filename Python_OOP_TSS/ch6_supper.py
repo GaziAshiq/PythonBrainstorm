@@ -15,6 +15,7 @@ class Car(Vehicle):
 
     def __init__(self, name, manufacturer, color, year):
         print('Creating a car')
+        # super() is used to call the constructor of the parent class
         super().__init__(name, manufacturer, color)
         self.year = year
         self.wheels = 4
