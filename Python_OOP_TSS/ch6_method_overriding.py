@@ -26,6 +26,7 @@ class Car(Vehicle):
         """Method for changing gear"""
         print(f'{self.name} changing gear to {gear_name}')
 
+    # Overriding the turn method of Vehicle class in Car class
     def turn(self, direction):
         print(f'{self.name} is turning {direction}')
 
