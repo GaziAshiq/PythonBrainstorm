@@ -1,3 +1,4 @@
-notebook
-voila
-pandas
+notebook==7.3.0b0
+voila==0.5.6
+pandas==2.2.3
+pytest==8.3.3
