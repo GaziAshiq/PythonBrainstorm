@@ -1,4 +1,4 @@
-def search_book(book_list, book):
+def search_book(book_list: list[str], book: str) -> int:
     for i in range(len(book_list)):
         if book_list[i] == book:
             return i
@@ -6,5 +6,7 @@ def search_book(book_list, book):
 
 
 if __name__ == '__main__':
-    li = [10, 15, 58, 41, 25, 36, 41]
-    print(search_book(li, 36))
+    li: list[str] = ['Algorithm', 'Data Structure', 'Python', 'Java', 'C++', 'C#', 'JavaScript', 'HTML', 'CSS', 'React',
+                     'Vue']
+    print(search_book(li, 'Python'))
+    print(search_book(li, 'ai'))
