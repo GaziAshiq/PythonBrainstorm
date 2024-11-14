@@ -20,3 +20,5 @@ class Solution(object):
 
 solution = Solution()
 print(solution.twoSum(nums=[2, 5, 5, 11], target=7))
+
+# problem link: https://leetcode.com/problems/two-sum/
