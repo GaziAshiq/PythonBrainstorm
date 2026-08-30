@@ -1,14 +1,13 @@
 install:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+	uv sync
 
 test:
-	python -m pytest -vv test_hello.py
+	uv run pytest -v
 
 format:
-	black *.py
+	uv run black .
 
 lint:
-	pylint --disable=R,C hello.py
+	uv run ruff check .
 
-all: install lint test
+all: install test
