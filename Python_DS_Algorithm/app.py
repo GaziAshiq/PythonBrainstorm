@@ -5,3 +5,4 @@ def solution(num, str_li):
         li.append(num + i)
     return li
 
+print(solution(1, ['a', 'b', 'c', 'd', 'e']))  # [1, 2, 3, 4, 5]
