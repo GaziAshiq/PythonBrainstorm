@@ -1,0 +1,9 @@
+[project]
+name = "pythonbrainstorm"
+version = "0.1.0"
+description = "A structured collection of Python scripts, data science notebooks, algorithms, and projects."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pytest>=9.1.1",
+]
